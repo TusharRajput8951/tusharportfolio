@@ -1,0 +1,670 @@
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+    }
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 250px;
+      background-color: #111;
+      color: white;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 1000;
+    }
+    .sidebar img {
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      border-color: gray;
+      border-style: solid;
+      border-width: 8px;
+    }
+    .sidebar h1 {
+      margin: 30px 0;
+      font-size: 24px;
+    }
+    .sidebar nav {
+      padding: 50px 0;
+      width: 100%;
+    }
+    .sidebar nav a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 15px;
+      text-align: center;
+      font-size: 18px;
+    }
+    .sidebar nav a:hover {
+      color: turquoise;
+    }
+    .main-content {
+      margin-left: 290px;
+      width: calc(100% - 290px);
+    }
+    .hero-section {
+      padding: 0%;
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .hero-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .welcome {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 70px;
+      text-align: center;
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      width: 100%;
+    }
+    .location {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 30px;
+      text-align: center;
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      width: 100%;
+    }
+    .hire {
+      color: turquoise;
+      background-color: transparent;
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translateX(-50%);
+      cursor: pointer;
+      padding: 10px 40px;
+      font-size: 25px;
+      border-radius: 50px;
+      border: 2px solid turquoise;
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-style: italic;
+      transition: all 0.3s ease;
+    }
+    .hire:hover {
+      color: white;
+      background-color: turquoise;
+    }
+    section {
+      padding: 100px 20px;
+      position: relative;
+    }
+    .about h1, .whatido h1, .summary h1, .portfolio h1, .contact h1 {
+      position: absolute;
+      top: 0%;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0.1;
+      color: #000;
+      font-size: 120px;
+      text-align: center;
+      width: 100%;
+    }
+    .about h2, .whatido h2, .summary h2, .portfolio h2, .contact h2 {
+      position: absolute;
+      left: 50%;
+      text-align: center;
+      transform: translateX(-50%);
+      color: #000;
+      font-size: 35px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      border-bottom: 2px solid turquoise;
+      display: inline-block;
+    }
+    .intro-text {
+      padding-left: 7%;
+      font-size: 24px;
+      text-align: left;
+      margin-top: 25%;
+    }
+    .name-highlight {
+      color: #00c896;
+      font-weight: bold;
+    }
+    .about-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .about-text {
+      width: 60%;
+      padding-left: 20px;
+      padding-right: 40px;
+      box-sizing: border-box;
+    }
+    .about-text p {
+      font-size: 20px;
+      text-align: justify;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      line-height: 1.6;
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+    .about-data {
+      width: 35%;
+    }
+    .about-data ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .about-data li {
+      font-size: 20px;
+      padding: 15px 0;
+      border-bottom: 1px solid turquoise;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .about-data li.last {
+      border-bottom: none;
+    }
+    .whatido {
+      background-color: rgb(238, 247, 247);
+    }
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-top: 100px;
+    }
+    .skill {
+      width: 45%;
+      margin-bottom: 50px;
+    }
+    .skill h4 {
+      font-size: 25px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      margin-bottom: 20px;
+    }
+    .skill p {
+      font-size: 15px;
+      text-align: justify;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      line-height: 1.6;
+    }
+    .progress-container1{
+      margin: 30px 0;
+    }
+    .progress-label1{
+      font-size: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      margin-bottom: 10px;
+    }
+    .progress-bar1{
+      height: 20px;
+      background-color: #000;
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+    }
+    .progress-bar1::before{
+      content: '';
+      display: block;
+      height: 100%;
+      width: 90%;
+      background-color: #00c896;
+      border-radius: 10px;
+    }
+    .progress-percentage1{
+      position: absolute;
+      right: 5px;
+      top: 0;
+      font-size: 16px;
+      line-height: 20px;
+      color: white;
+    }
+    .progress-container2{
+      margin: 30px 0;
+    }
+    .progress-label2{
+      font-size: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      margin-bottom: 10px;
+    }
+    .progress-bar2{
+      height: 20px;
+      background-color: #000;
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+    }
+    .progress-bar2::before{
+      content: '';
+      display: block;
+      height: 100%;
+      width: 90%;
+      background-color: #00c896;
+      border-radius: 10px;
+    }
+    .progress-percentage2{
+      position: absolute;
+      right: 5px;
+      top: 0;
+      font-size: 16px;
+      line-height: 20px;
+      color: white;
+    }
+    .progress-container3{
+      margin: 30px 0;
+    }
+    .progress-label3{
+      font-size: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      margin-bottom: 10px;
+    }
+    .progress-bar3{
+      height: 20px;
+      background-color: #000;
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+    }
+    .progress-bar3::before{
+      content: '';
+      display: block;
+      height: 100%;
+      width: 70%;
+      background-color: #00c896;
+      border-radius: 10px;
+    }
+    .progress-percentage3{
+      position: absolute;
+      right: 5px;
+      top: 0;
+      font-size: 16px;
+      line-height: 20px;
+      color: white;
+    }
+    .progress-container4{
+      margin: 30px 0;
+    }
+    .progress-label4{
+      font-size: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      margin-bottom: 10px;
+    }
+    .progress-bar4{
+      height: 20px;
+      background-color: #000;
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+    }
+    .progress-bar4::before{
+      content: '';
+      display: block;
+      height: 100%;
+      width: 80%;
+      background-color: #00c896;
+      border-radius: 10px;
+    }
+    .progress-percentage4{
+      position: absolute;
+      right: 5px;
+      top: 0;
+      font-size: 16px;
+      line-height: 20px;
+      color: white;
+    }
+    .progress-container5{
+      margin: 30px 0;
+    }
+    .progress-label5{
+      font-size: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      margin-bottom: 10px;
+    }
+    .progress-bar5{
+      height: 20px;
+      background-color: #000;
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+    }
+    .progress-bar5::before{
+      content: '';
+      display: block;
+      height: 100%;
+      width: 75%;
+      background-color: #00c896;
+      border-radius: 10px;
+    }
+    .progress-percentage5{
+      position: absolute;
+      right: 5px;
+      top: 0;
+      font-size: 16px;
+      line-height: 20px;
+      color: white;
+    }
+    .progress-container6{
+      margin: 30px 0;
+    }
+    .progress-label6{
+      font-size: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      margin-bottom: 10px;
+    }
+    .progress-bar6{
+      height: 20px;
+      background-color: #000;
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+    }
+    .progress-bar6::before{
+      content: '';
+      display: block;
+      height: 100%;
+      width: 70%;
+      background-color: #00c896;
+      border-radius: 10px;
+    }
+    .progress-percentage6{
+      position: absolute;
+      right: 5px;
+      top: 0;
+      font-size: 16px;
+      line-height: 20px;
+      color: white;
+    }
+    .resume-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 100px;
+    }
+    .education, .experience {
+      width: 45%;
+    }
+    .education h3, .experience h3 {
+      font-size: 30px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .education-item {
+      border: 2px solid turquoise;
+      border-radius: 25px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    .education-period {
+      color: white;
+      background-color: rgb(106, 241, 106);
+      width: fit-content;
+      padding: 10px;
+      border-radius: 25px;
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      margin-bottom: 15px;
+    }
+    .education-place {
+      color: red;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+    .education-desc {
+      font-size: 20px;
+      text-align: justify;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      line-height: 1.6;
+    }
+    .portfolio {
+      background-color: #e6ffe6;
+    }
+    .portfolio-projects {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-top: 100px;
+    }
+    .project {
+      width: 45%;
+      margin-bottom: 50px;
+      text-align: center;
+    }
+    .project img {
+      margin-top: 70px;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .project h3 {
+      font-size: 40px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 20px 0;
+    }
+    .project-button {
+      padding: 12px 30px;
+      background-color: #00c896;
+      color: white;
+      font-size: 18px;
+      font-family: Arial, sans-serif;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .project-button:hover {
+      background-color: #00a57a;
+      transform: scale(1.05);
+    }
+    .contact-form {
+      max-width: 700px;
+      margin: 50px auto 0;
+      padding: 20px;
+    }
+    .contact-form h3 {
+      text-align: center;
+      margin-top: 100px; 
+      margin-bottom: 30px;
+      font-size: 25px;
+    }
+    .contact-form input, 
+    .contact-form textarea {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      font-size: 16px;
+    }
+    .contact-form textarea {
+      height: 150px;
+    }
+    .contact-form button {
+      display: block;
+      margin: 0 auto;
+      background-color: transparent;
+      padding: 10px 20px;
+      cursor: pointer;
+      width: 50%;
+      border-radius: 25px;
+      font-size: 20px;
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      border: 2px solid turquoise;
+      transition: all 0.3s ease;
+    }
+    .contact-form button:hover {
+      background-color: turquoise;
+      color: white;
+    }
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 50px;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin: 0 30px 20px;
+    }
+    .contact-item img {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
+    .contact-item h4 {
+      font-size: 20px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .footer {
+      background-color: #000;
+      color: white;
+      font-size: 18px;
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      padding: 50px 0;
+      text-align: center;
+    }
+    .typewriter-container {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      width: 100%;
+    }
+    .animation {
+      color: rgb(0, 0, 0);
+      font-family: monospace;
+      font-size: 35px;
+    }
+    #typewriter::after {
+      content: '|';
+      animation: blink 0.7s infinite;
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+    @media (max-width: 1200px) {
+      .sidebar {
+        width: 200px;
+      }
+      .main-content {
+        margin-left: 220px;
+        width: calc(100% - 220px);
+      }
+      .welcome {
+        font-size: 50px;
+      }
+      .location {
+        font-size: 25px;
+      }
+      .hire {
+        font-size: 20px;
+      }
+      .about h1, .whatido h1, .summary h1, .portfolio h1, .contact h1 {
+        font-size: 80px;
+      }
+    }
+    @media (max-width: 992px) {
+      .about-text, .about-data {
+        width: 100%;
+        padding-right: 0;
+      }
+      .about-data {
+        margin-top: 50px;
+      }
+      .education, .experience {
+        width: 100%;
+      }
+      .experience {
+        margin-top: 50px;
+      }
+      .project {
+        width: 100%;
+        max-width: 500px;
+      }
+    }
+    @media (max-width: 768px) {
+      .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+      }
+      .main-content {
+        margin-left: 0;
+        width: 100%;
+      }
+      .hero-section {
+        height: 80vh;
+      }
+      .welcome {
+        font-size: 40px;
+        top: 25%;
+      }
+      .location {
+        font-size: 20px;
+      }
+      .hire {
+        font-size: 18px;
+        padding: 8px 30px;
+      }
+      .about h1, .whatido h1, .summary h1, .portfolio h1, .contact h1 {
+        font-size: 60px;
+      }
+      .about h2, .whatido h2, .summary h2, .portfolio h2, .contact h2 {
+        font-size: 30px;
+      }
+      .skill {
+        width: 100%;
+        max-width: 500px;
+      }
+      .contact-form button {
+        width: 70%;
+      }
+    }
+    @media (max-width: 576px) {
+      .hero-section {
+        height: 70vh;
+      }
+      .welcome {
+        font-size: 30px;
+      }
+      .location {
+        font-size: 18px;
+      }
+      .hire {
+        font-size: 16px;
+        padding: 6px 25px;
+      }
+      .about h1, .whatido h1, .summary h1, .portfolio h1, .contact h1 {
+        font-size: 40px;
+      }
+      .about h2, .whatido h2, .summary h2, .portfolio h2, .contact h2 {
+        font-size: 25px;
+      }
+      .about-text p, .education-desc {
+        font-size: 18px;
+      }
+      .contact-form button {
+        width: 90%;
+        font-size: 18px;
+      }
+      .animation {
+        font-size: 25px;
+      }
+    }
